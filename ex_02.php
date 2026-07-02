@@ -7,7 +7,7 @@ function inverterTexto($texto) {
 
 }
 
-echo "Texto original: Olá, mundo! <br>";
-echo "Texto invertido: " . inverterTexto("Olá, mundo!") . "<br>";
+echo "Texto original: Oi, mundo! <br>";
+echo "Texto invertido: " . inverterTexto("Oi, mundo!") . "<br>";
 
 ?>
