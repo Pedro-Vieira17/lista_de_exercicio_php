@@ -14,10 +14,12 @@ function analisarTexto($texto){
     );
 }
 
-$texto = "Olá, mundo!";
+$texto = "Pedro Paulo Vieira Junior";
 
 echo "Texto original: $texto<br>";
+
 $resultado = analisarTexto($texto);
+
 echo "Quantidade de palavras: " . $resultado["palavras"] . "<br>";
 echo "Quantidade de caracteres: " . $resultado["caracteres"] . "<br>";
 echo "Quantidade de vogais: " . $resultado["vogais"] . "<br>";

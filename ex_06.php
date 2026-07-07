@@ -1,28 +1,48 @@
 <?php
 
-function converterTemperatura($tempertura_celsius, $temperatura_fahrenheit, $temperatura_kelvin) {
+function converterTemperatura($valor, $origem, $destino){
 
-    $temperaturaFahrenheit = ($tempertura_celsius * 9/5) + 32;
-    $temperaturaFahrenheit = ($tempertura_Kelvin - 273.15) * 9/5 + 32;
-    $temperaturaKelvin = $tempertura_celsius + 273.15;
-    $temperaturaCelsius = ($temperatura_fahrenheit -30) /2;
+    if($origem == "C" && $destino == "F"){
+        return ($valor * 9/5) + 32;
+    }
 
-    return array(
-        "fahrenheit" => $temperaturaFahrenheit,
-        "kelvin" => $temperaturaKelvin
-    );
+    elseif($origem == "C" && $destino == "K"){
+        return $valor + 273.15;
+    }
+
+    elseif($origem == "F" && $destino == "C"){
+        return ($valor - 32) * 5/9;
+    }
+
+    elseif($origem == "F" && $destino == "K"){
+        return (($valor - 32) * 5/9) + 273.15;
+    }
+
+    elseif($origem == "K" && $destino == "C"){
+        return $valor - 273.15;
+    }
+
+    elseif($origem == "K" && $destino == "F"){
+        return (($valor - 273.15) * 9/5) + 32;
+    }
+
+    elseif($origem == $destino){
+        return $valor;
+    }
+
+    else{
+        return "Escala inválida!";
+    }
 }
 
-$temperaturaCelsius = 0;
-$temperatura_fahrenheit = 53;
-$temperatura_kelvin = 0;    
 
-$resultado = converterTemperatura($temperaturaCelsius, $temperatura_fahrenheit, $temperatura_kelvin);
 
-echo "Temperatura em Celsius: $temperaturaCelsius °C<br>";
-echo "Temperatura em Fahrenheit: " . $resultado["fahrenheit"] . " °F<br>";
-echo "Temperatura em Kelvin: " . $resultado["kelvin"] . " K<br>";
-
+echo converterTemperatura(20, "C", "F") . " °F<br>";
+echo converterTemperatura(68, "F", "C") . " °C<br>";
+echo converterTemperatura(78, "F", "K") . " K<br>";
+echo converterTemperatura(30, "K", "C") . " °C<br>";
+echo converterTemperatura(310, "K", "F") . " °F<br>";
+echo converterTemperatura(2, "C", "K") . " K<br>";
 
 
 
