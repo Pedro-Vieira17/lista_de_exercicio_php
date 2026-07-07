@@ -37,6 +37,7 @@ function converterTemperatura($valor, $origem, $destino){
 
 
 
+
 echo converterTemperatura(20, "C", "F") . " °F<br>";
 echo converterTemperatura(68, "F", "C") . " °C<br>";
 echo converterTemperatura(78, "F", "K") . " K<br>";
