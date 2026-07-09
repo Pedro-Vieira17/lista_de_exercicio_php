@@ -1,8 +1,8 @@
 <?php
 
-    calcularMedia($notas){
+   function calcularMedia($notas){
 
-        $maior = $notas[0];
+    $maior = $notas[0];
     $menor = $notas[0];
     $soma = 0;
 
