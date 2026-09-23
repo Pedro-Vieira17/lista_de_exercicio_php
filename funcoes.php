@@ -1,16 +1,16 @@
 <?php
 
-// 1. Calcular IMC
+
 function calcularIMC($peso, $altura){
     return $peso / ($altura * $altura);
 }
 
-// 2. Validar e-mail
+
 function validarEmail($email){
     return filter_var($email, FILTER_VALIDATE_EMAIL);
 }
 
-// 3. Gerar senha aleatória
+
 function gerarSenha($tamanho){
     $caracteres = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
     $senha = "";
@@ -22,7 +22,7 @@ function gerarSenha($tamanho){
     return $senha;
 }
 
-// 4. Contar vogais
+
 function contarVogais($texto){
     $vogais = "aeiouAEIOU";
     $contador = 0;
@@ -36,29 +36,28 @@ function contarVogais($texto){
     return $contador;
 }
 
-// 5. Inverter texto
+
 function inverterTexto($texto){
     return strrev($texto);
 }
 
-// 6. Calcular idade
 function calcularIdade($anoNascimento){
     return date("Y") - $anoNascimento;
 }
 
-// 7. Converter moeda (Real para Dólar)
+
 function converterMoeda($valor, $cotacao){
     return $valor / $cotacao;
 }
 
-// 8. Formatar telefone
+
 function formatarTelefone($telefone){
     return "(" . substr($telefone,0,2) . ") " .
            substr($telefone,2,5) . "-" .
            substr($telefone,7,4);
 }
 
-// 9. Saudação
+
 function saudacao(){
 
     $hora = date("H");
@@ -72,7 +71,6 @@ function saudacao(){
     }
 }
 
-// 10. Validar senha forte
 function validarSenha($senha){
 
     if(strlen($senha) >= 8){
